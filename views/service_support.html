@@ -1,0 +1,89 @@
+{{extend './_layouts/layout.html'}}
+
+{{block 'title'}}
+<title>常见问题</title>
+{{/block}}
+
+
+{{block 'style'}}
+{{/block}}
+
+
+{{block 'content'}}
+<div class="container" style="width: 100%;  padding: 0px;">
+    <!--img-responsive代表响应式图片-->
+    <img src="../../public/images/01.jpg" class="img-responsive" width="100%">
+</div>
+<div class="articleee container">
+    <div class="typeArea">
+        <div class="productionPublicContain aos-init aos-animate">
+            <div class="typeArea">
+                <div class="ce6"><span>SERVICE</span>服务与支持
+                </div>
+            </div>
+        </div>
+        <div class="navigationn clearfix aos-init aos-animate">
+            <a class="current col-xs-4" href="#"
+                style="background-color:#004d88 ; color: white; text-decoration: none;">常见问题</a>
+            <a href="./ggziliao_xiazai.html" class="col-xs-4">资料下载</a>
+            <a href="./ggjishu_zhici.html" class="col-xs-4">技术支持</a>
+        </div>
+        <div class="text1">
+            <p><br></p>
+            <p>Q：GTS多卡编程时卡号确定问题</p>
+            <p><br></p>
+            <p>A：多卡编程时卡号：</p>
+            <p>问题描述：
+                客户在使用多卡时，需要调用卡号从而确定控制的卡，在正常情况下，PCI卡槽靠近工控机北桥的是1号卡，远离北桥的按照距离依次增大。但有时客户会出现卡号混乱的情况，例如距离PCI卡槽远近依次卡号为3、1、2，如果这个时候客户的PCI卡槽比较多，可能会更加混乱
+            </p>
+            <P>
+                问题解释：
+                PCI的卡槽中卡的的顺序其实是根据其被分配的设备号来决定的，设备号越小，优先级越高，里面所插卡的分配卡号越小。一般情况下，距离北桥近的设备号小，所以平时认为靠近北桥的卡号小。但有些工控机的PIC设备号没有按照顺序排列就会设备号通过右键硬件“GoogolTech
+                GT—800—PCL ”子目录下的相关驱动，“属性”中可以查询。出现上述问题。
+            </P>
+            <P>解决方法：</P>
+            <P>1、通过往每个槽中插入卡，查询设备号来确定槽的优先级从而确定卡号。</P>
+            <P>2、可以直接让客户使用时固定使用几个PCI插槽，然后记住那几个槽的分配卡号，以后这些槽的卡号就不会变了。</P>
+            <P>注意事项：</P>
+            <P>
+                1、在第一次插卡、装驱动后要重启一下工控机，然后再检测相对卡号。这个规律适用于GTS系列卡（400、800或者混合用都可以），其他系列还未测试，仅做参考。
+            </P>
+            <P><br></P>
+            <p>Q：GTS缓冲区数据大于4096段的处理</p>
+            <p><br></p>
+            <p>A：缓冲区数据大于4096段的处理：</p>
+            <p>很多时候会碰到所压数据大于4096段的情况，一般简单处理如下：</p>
+            <p>1、数据先压入一部分，执行CrdStart。 之后一边压数据一边执行。</p>
+            <p>2 、数据压满4096段后，启动缓冲区运动。这样一边压数据一边执行</p>
+            <p><br></p>
+            <p>Q：GTS控制卡不能回零</p>
+            <p><br></p>
+            <p>A：会有一些客户反馈GTS控制卡不能回零，为了实现回零运动，需要做一些前期准备并注意可能导致回零失败的问题。：</p>
+            <p>GTS系列运动控制卡实现回零功能，需要三个条件：</p>
+            <p>(1) 能够捕获到Home信号；</p>
+            <p>(2) 规划位置和编码器位置方向相同；</p>
+            <p>(3) 正确的回零代码。</p>
+            <p>能够捕获到Home信号与GTS系列运动控制卡配套的端子板上有接收Home信号的接口（标签为Home0、Home1……），
+                Home0对应于AXIS1的Home信号接口，Home1对应于AXIS2的Home信号接口，依此类推。默认配置下，Home信号接口为下降沿触发，
+                如果使用常开Home开关时，当Home开关触发Home信号接口将获得一个下降沿信号，此时通过调试软件MCT2008可以查看控制卡和端子板是否能够捕获到Home信号，
+                具体步骤如下所示：打开MCT2008 点击：视图–捕获;，弹出如下窗口，勾选相应的轴号（如果要测试AXIS1的Home，并且把Home开关接到Home0信号接口，就勾选下图窗口的轴1）
+            </p>
+            <p><br></p>
+            <p>Q：GTS控制卡脉冲控制模式单端输出如何接线？差分输出如何接线？</p>
+            <p><br></p>
+            <p>A：GTS控制卡脉冲控制模式单端、差分输出接线说明：</p>
+            <p>固高运动控制卡（GTS为例）、控制器（GUS为例），都是采用的D25接头将控制器或端子板和驱动器连接的。 但是具体接线有区别。</p>
+            <p>单端输出：脉冲控制模式分为两种，即“脉冲+方向”和“CCW/CW”模式，两种模式的单端接法是一样的，只需要将控制器端的pluse+/dir+/5V和驱动器端的pluse+/dir+/5V相连接即可。
+                注意：若驱动器端的5V电压不是有控制器端提供，而是有外部开关电源提供的，此时仍需要采用此种接线方法（CCW/CW模式），则需要将控制器的5V电和外部供电电源模块的5V电短接，即将5V共起来。
+            </p>
+            <p>双端输出（差分输出）：脉冲控制的两种模式，即“脉冲+方向”和“CCW/CW”模式，两种模式的双端接法也是一样的，需要将控制器端的pluse+、pluse+/dir+、dir-/5V、GND和驱动器端的pluse+、pluse+/dir+、dir-/5V、GND连接即可。
+            </p>
+            <p>注意：控制器输出模式采用差分接线方法，采用双绞线的形式，相比单端接线方法，能够增强抗干扰能力。单端接线时抗干扰的能力较弱</p>
+            <p>。</p>
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{block 'script'}}
+{{/block}}

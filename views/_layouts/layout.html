@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {{block 'title'}}
+    {{/block}}
+
+
+
+    <link rel="stylesheet" href="../../public/css/images.css">
+    <link rel="stylesheet" href="../../public/css/xiazai.css">
+    <link rel="stylesheet" href="../../public/css/jishu.css">
+
+    <!--头尾样式模板-->
+    <link rel="stylesheet" href="../../public/css/layui.css">
+    <script src="../../public/js/jquery-3.js"></script>
+    <script src="../../public/js/layui.js"></script>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="../../public/css/basic.css">
+    <link rel="stylesheet" href="../../public/css/swiper.css">
+    <link rel="shortcut icon" href="https://rossum-robot.com/static/index/rossum9ED2/pc/zh-cn/imagess/favIcon.png"
+        sizes="32x32">
+    <link rel="stylesheet" href="../../public/css/animate.css">
+    <script src="../../public/js/aos.js"></script>
+    <link rel="stylesheet" href="../../public/css/aos.css">
+    <!-- 引入头部样式 -->
+    <link rel="stylesheet" href="../../public/css/callus.css">
+
+
+    {{block 'style'}}
+    {{/block}}
+</head>
+
+<body aos-easing="ease-in-sine" aos-duration="400" aos-delay="100">
+    {{include '../_partials/header.html'}}
+
+    {{block 'content'}}
+    {{/block}}
+
+    {{include '../_partials/footer.html'}}
+
+
+
+    <script src="../../public/js/jquery-3.js"></script>
+    <script src="../../public/js/swiper.js"></script>
+    <script src="../../public/js/index.js"></script>
+
+    {{block 'script'}}
+    {{/block}}
+
+
+</body>
+
+</html>

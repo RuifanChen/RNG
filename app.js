@@ -2,28 +2,28 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const router = require("./router");
 const mongoose = require("mongoose");
-const expressSession = require("express-session");
+// const expressSession = require("express-session");
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/blog");
+mongoose.connect("mongodb://localhost:27017/igeek");
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function() {
     console.log("连接成功");
 });
 
-app.use(
-    expressSession({
-        name: "sessionID",
-        secret: "secret",
-        resave: false,
-        rolling: true,
-        saveUninitialized: false,
-        cookie: {
-            maxAge: 1000 * 60 * 3,
-        },
-    })
-);
+// app.use(
+//     expressSession({
+//         name: "sessionID",
+//         secret: "secret",
+//         resave: false,
+//         rolling: true,
+//         saveUninitialized: false,
+//         cookie: {
+//             maxAge: 1000 * 60 * 3,
+//         },
+//     })
+// );
 
 app.use("/node_modules", express.static("./node_modules"));
 app.use("/public", express.static("./public"));
