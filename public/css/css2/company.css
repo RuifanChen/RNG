@@ -1,0 +1,48 @@
+.company {
+  height: 140px;
+  overflow: hidden;
+}
+.company .cpy1 {
+  text-align: center;
+  margin-top: 40px;
+}
+.company .cpy1 span {
+  vertical-align: middle;
+  font-size: 34px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.company .cpy1 .hl {
+  width: 45px;
+  height: 2px;
+  background-color: #004d88;
+  display: inline-block;
+  vertical-align: middle;
+}
+.company .cpy1 .cpy1b {
+  text-align: center;
+  font-size: 20px;
+  color: #ccc;
+}
+.jianjie {
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f1f0f0;
+  height: 700px;
+}
+.jianjie .left {
+  line-height: 30px;
+  text-indent: 2em;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 200;
+}
+.jianjie .left span {
+  color: #004d88;
+  font-weight: bold;
+}
+.jianjie .right img {
+  width: 100%;
+}

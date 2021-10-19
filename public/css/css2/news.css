@@ -1,0 +1,112 @@
+.news {
+  height: 140px;
+  overflow: hidden;
+}
+.news .news1 {
+  text-align: center;
+  margin-top: 40px;
+}
+.news .news1 span {
+  vertical-align: middle;
+  font-size: 34px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.news .news1 .hl {
+  width: 45px;
+  height: 2px;
+  background-color: #004d88;
+  display: inline-block;
+  vertical-align: middle;
+}
+.news .news1 .news1b {
+  text-align: center;
+  font-size: 20px;
+  color: #ccc;
+}
+.news2 {
+  padding-left: 75px;
+  padding-right: 75px;
+  height: 250px;
+}
+.news2 .hl {
+  float: left;
+  width: 25%;
+  height: 200px;
+  margin-left: 80px;
+  border-bottom: 2px solid #f0f0f0;
+  border-right: 2px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.news2 .hl:hover {
+  background-color: #004d88;
+}
+.news2 .hl:hover span {
+  color: #fff;
+}
+.news2 .hl:hover .sp3 {
+  color: #fff;
+}
+.news2 .hl:hover div {
+  background-color: #fff;
+}
+.news2 .hl a {
+  display: block;
+  height: 100%;
+  transition: all 0.5s;
+}
+.news2 .hl a .sp1 {
+  font-size: 30px;
+}
+.news2 .hl a .sp2 {
+  font-size: 16px;
+}
+.news2 .hl a .sp3 {
+  font-size: 18px;
+  color: #333333;
+  font-weight: bold;
+}
+.news2 .hl a div {
+  width: 40px;
+  height: 3px;
+  background-color: #004d88;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.news2 .hl a span {
+  color: #004d88;
+}
+.news2 .hl a:hover {
+  text-decoration: none;
+}
+.btn {
+  width: 100%;
+  height: 100px;
+}
+.btn .btn1 {
+  width: 0px;
+  height: 40px;
+  background-color: #004d88;
+  margin-left: 45%;
+  text-align: left;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.btn .btn1:hover {
+  width: 120px;
+}
+.btn .btn1 #btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px #323232 solid;
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.5s;
+}
+.btn .btn1 #btn:hover {
+  color: #fff;
+}

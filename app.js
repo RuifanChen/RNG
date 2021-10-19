@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const router = require("./router");
 const mongoose = require("mongoose");
 const expressSession = require("express-session");
 const app = express();
@@ -37,12 +36,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //挂载路由
-app.use("/", router);
 
 //404处理
-app.get("*", (req, res) => {
+app.get("/e", (req, res) => {
     res.render("404.html");
 });
+
+app.get("/shouye", (req, res) => {
+    res.render("shouye.html");
+});
+
+
 
 //错误处理中间件
 app.use(function(err, req, res, next) {
