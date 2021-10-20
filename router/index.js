@@ -7,8 +7,8 @@ router.get("/", (req, res) => {
 })
 
 
-router.get("/service_support.html", (req, res) => {
-    res.render("service_support.html")
+router.get('/ggfuwu_yuzhi.html', (req, res) => {
+    res.render("ggfuwu_yuzhi.html")
 })
 
 
