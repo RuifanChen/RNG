@@ -1,0 +1,56 @@
+{{extend './_layouts/layout.html'}}
+
+{{block 'title'}}
+    <title>芜湖固高自动化技术有限公司</title>
+{{/block}}
+
+{{block 'style'}} {{/block}}
+
+{{block 'content'}}
+<!-- 大图 -->
+<div class="otherBanner">
+    <img src="/public/img/img4/newsbanner.jpg" alt="">
+</div>
+
+<!-- 新闻中心 -->
+<div class="productionPublicContain aos-init aos-animate" aos="fade-up">
+    <div class="typeArea">
+        <div>
+            <span class="es6">NEWS</span>新闻中心
+        </div>
+    </div>
+</div>
+
+<!-- 内容部分 -->
+<div class="newsListContain">
+
+    {{each result}}
+    <div class="newsList aos-init aos-animate" onclick="javascript:window.location.href='/news.html/{{$value._id.toString()}}'" aos="fade-up">
+        <div class="typeArea">
+            <div class="imgArticleContain">
+                <div class="imgArticle">
+                    <a class="imgArticleLeftContain">
+                        <img class="imgArticleLeft" src="{{$value.avatar}}" alt="">
+                    </a>
+                    <div class="imgArticleRight">
+                        <p class="title">{{$value.name}}</p>
+                        <p class="time">{{$value.data}}</p>
+                        <p class="contain"></p>
+                        <a class="seeMore">查看更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{/each}}
+    
+    
+    
+</div>
+
+<!-- 留白 -->
+<div class="otherCompany"></div>
+{{/block}}
+
+{{block 'script'}} {{/block}}

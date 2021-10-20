@@ -1,0 +1,207 @@
+﻿{{extend './_layouts/layout.html'}}
+
+{{block 'title'}}
+    <title>芜湖固高自动化技术有限公司</title>
+{{/block}}
+
+{{block 'style'}}
+<style>
+       .p1{
+     font-family: "宋体";
+        }
+</style> 
+
+{{/block}}
+{{block 'content'}}
+    <!-- 大图 -->
+    <div class="otherBanner">
+        <img src="../public/img/img4/newsbanner.jpg" alt="">
+    </div>
+
+    <!-- 标题 -->
+    <div class="articleee">
+        <div class="typeArea">
+            <div class="title aos-init aos-animate" aos="fade-up">
+                <p class="title aos-init aos-animate" aos="fade-up" style="font-family:'黑体'; font-weight:bold;">
+                    {{result.name}}
+                </p>
+                <p class="info aos-init aos-animate" aos="fade-up">
+                    <span class="time"><img src="../public/img/img4/time.png" alt="">时间：2019-06-03</span>
+                    <span class="eye"><img src="../public/img/img4/eye.png" alt="">浏览人数：1314 </span>
+            </p>
+            </div>
+            <div class="show">
+                
+            </div>
+           <div class="container" id="mythisbox"> {{result.html}}</div>
+           
+            <!-- <div class="contain aos-init aos-animate" aos="fade-up" style="text-indent:2em;">
+                <p><br></p>
+                <p><br></p>
+             
+                <p style="margin-top: 0px; margin-bottom: 0px; white-space: normal; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: #333333; font-family: '宋体'; font-weight:bold; font-size: 17px; text-align: justify; background-color: rgb(255, 255, 255); letter-spacing: 0.5px; box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                   {{result.title1}}
+                    <span style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(230, 0, 18); box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                        <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word !important;"></strong>
+                    </span>
+                </p>
+                
+                </p>
+                <p><img src="{{result.img1}}" title="news1tu1.png"></p>
+                {{if result.title2}}
+                <p style="margin-top: 0px; margin-bottom: 0px; white-space: normal; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: '宋体'; font-weight:bold; font-size: 17px; text-align: justify; background-color: rgb(255, 255, 255); letter-spacing: 0.5px; box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                    
+                    {{result.title2}}
+                    <span style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(230, 0, 18); box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                        <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word !important;"></strong>
+                    </span>
+                    <br>
+                </p>
+                {{/if}}
+                {{if result.img2}}
+                <p><img src="{{result.img2}}" title="news1tu2.png"></p>
+                {{/if}}
+                {{if result.title3}}
+                <p style="margin-top: 0px; margin-bottom: 0px; white-space: normal; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: '宋体'; font-weight:bold; font-size: 17px; text-align: justify; background-color: rgb(255, 255, 255); letter-spacing: 0.5px; box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                    {{result.title3}}
+                    <span style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(230, 0, 18); box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                        <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word !important;"></strong>
+                    </span>
+                    <br>
+                </p>
+                {{/if}}
+                {{if result.img3}}
+                <p><img src="{{result.img3}}" title="news1tu2.png"></p>
+                {{/if}}
+                {{if result.title4}}
+                <p style="margin-top: 0px; margin-bottom: 0px; white-space: normal; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: '宋体'; font-weight:bold; font-size: 17px; text-align: justify; background-color: rgb(255, 255, 255); letter-spacing: 0.5px; box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                    {{result.title4}}
+                    <span style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(230, 0, 18); box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                        <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word !important;"></strong>
+                    </span>
+                    <br>
+                </p>
+                {{/if}}
+                {{if result.img4}}
+                <p><img src="{{result.img4}}" title="news1tu2.png"></p>
+                {{/if}}
+                {{if result.title5}}
+                <p style="margin-top: 0px; margin-bottom: 0px; white-space: normal; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: '宋体'; font-weight:bold; font-size: 17px; text-align: justify; background-color: rgb(255, 255, 255); letter-spacing: 0.5px; box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                    {{result.title5}}
+                    <span style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(230, 0, 18); box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                        <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word !important;"></strong>
+                    </span>
+                    <br>
+                </p>
+                {{/if}}
+                {{if result.img5}}
+                <p><img src="{{result.img5}}" title="news1tu2.png"></p>
+                {{/if}}
+                {{if result.title6}}
+                <p style="margin-top: 0px; margin-bottom: 0px; white-space: normal; padding: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(51, 51, 51); font-family: '宋体'; font-weight:bold; font-size: 17px; text-align: justify; background-color: rgb(255, 255, 255); letter-spacing: 0.5px; box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                    {{result.title6}}
+                    <span style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(230, 0, 18); box-sizing: border-box !important; overflow-wrap: break-word !important;">
+                        <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; overflow-wrap: break-word !important;"></strong>
+                    </span>
+                    <br>
+                </p>
+                {{/if}}
+                <p><br></p>
+            </div> -->
+
+            <div class="PageSwitch aos-init" aos="fade-up">
+                <a class="before invis">上一篇
+                    <img src="../public/img/img4/news4.html" alt="">
+                </a>
+                <a class="returnPage" href="news.html">返回列表</a>
+                <a class="next invis">
+                    <img src="../public/img/img4/nwes2.html" alt="">
+                    下一篇</a>
+            </div>
+        </div>
+
+    </div>
+{{/block}}
+    <script>
+        AOS.init({
+            offset: 120,
+            duration: 400,
+            easing: 'ease-in-sine',
+            delay: 100,
+            once: true,
+            disable: window.innerWidth < 1400
+        });
+    </script>
+
+    <!-- 尾部 -->
+    <div class="footer">
+        <div class="typeArea">
+            <div class="top">
+                <div class="left">
+    
+                    <div class="productionSort">
+    
+                        <div>
+                            <a class="title">关于我们</a>
+                            <a href="#.html">公司介绍</a>
+                            <a href="#.html">资质荣誉 </a>
+                            <a href="#.html">合作伙伴 </a>
+    
+                        </div>
+                        <div>
+                            <a class="title">产品中心</a>                      
+                            <a href="#.html">运控产品</a>
+                            <a href="#.html">教研方案</a>
+                            <a href="#.html">工业方案</a>
+                        </div>
+                        
+                        <div>
+                            <a class="title">新闻中心</a>
+                            <a href="news.html">公司新闻</a>
+                        </div>
+                        <div>
+                            <a class="title" href="callus.html" style="cursor: pointer;">联系我们</a>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                <div class="mid">
+                    <span class="numTip br">全国售后服务热线</span>
+                    <span class="num">0553-5658901</span>
+                </div>
+                <div class="right">
+                    <span class="br qrTip">微信公众号</span>
+                    <img class="qrCode" src="./images/erweima.png" alt="">
+                </div>
+            </div>
+            <div class="bottom">
+                <a class="copy" href="http://beian.miit.gov.cn/" style="cursor: pointer">Copyright © 芜湖固高自动化技术有限公司</a>
+            </div>
+        </div>
+        <img class="footerBg" src="../public/img/img4/footerbg.png" alt="">
+    
+        <script src="../public/js/js4/jquery-3.js"></script>
+        <script src="../public/js/js4/swiper.js"></script>
+        <script src="../public/js/js4/index.js"></script>
+
+      
+{{block 'script'}} 
+<link rel="stylesheet" href="../public/css/css4/layui.css">
+<script src="../public/js/js4/jquery-3.js"></script>
+<script src="../public/js/js4/layui.js"></script>   
+<script type="text/javascript"></script>
+<link rel="stylesheet" href="../public/css/css4/basic.css">
+<link rel="stylesheet" href="../public/css/css4/swiper.css">
+<link rel="shortcut icon" href="https://rossum-robot.com/static/index/rossum9ED2/pc/zh-cn/imagess/favIcon.png" sizes="32x32">
+<link rel="stylesheet" href="../public/css/css4/animate.css">
+<script src="../public/js/js4/aos.js"></script>
+<link rel="stylesheet" href="../public/css/css4/aos.css">
+<!-- 引入头部样式 -->
+<link rel="stylesheet" href="../public/css/css4/news.css">
+
+<script>
+    var html=$("#mythisbox").text();
+    $("#mythisbox").html(html)
+</script>
+{{/block}}
