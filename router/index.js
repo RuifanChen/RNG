@@ -6,16 +6,14 @@ router.get('/', function (req, res) {
     res.render('index.html')
 })
 
-router.get('/callus', function (req, res) {
+router.get('/callus.html', function (req, res) {
     res.render('callus.html')
 })
 
-router.get('/news', function (req, res, next) {
+router.get('/news.html', function (req, res) {
     res.render('news.html')
 })
 
-router.post('/register', function (req, res, next) {
-    console.log("xxxx");
-})
+
 
 module.exports = router
