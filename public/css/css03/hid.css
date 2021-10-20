@@ -1,0 +1,15 @@
+.set {
+  display: none;
+  margin-top: 40px;
+}
+.set .container {
+  text-align: center;
+}
+.set .container span img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .set {
+    display: block;
+  }
+}

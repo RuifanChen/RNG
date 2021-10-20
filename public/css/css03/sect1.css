@@ -1,0 +1,65 @@
+.sect .container {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+.sect .container :first-child {
+  background-color: #004d88;
+  color: white;
+}
+.sect .container a {
+  border: solid 1px black;
+  padding: 15px 25px;
+  font-size: 16px;
+  text-decoration: none;
+}
+.sect .container a:hover {
+  background-color: #004d88;
+  color: white;
+}
+.sect1 {
+  padding: 0px 0px 40px 0px;
+}
+.sect1 .container-fluid {
+  width: 100%;
+  margin-top: 40px;
+}
+.sect1 .container-fluid .col-md-5 {
+  padding: 40px 40px 0px 80px;
+  font-size: 16px;
+}
+.sect1 .container-fluid .col-md-5:first-child {
+  position: relative;
+}
+.sect1 .container-fluid .col-md-5::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  border-bottom: solid 2px blue;
+  position: absolute;
+  top: 110px;
+  left: 80px;
+}
+.sect1 .container-fluid .col-md-5 .comp {
+  font-size: 0.14rem;
+  color: #999;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.sect1 .container-fluid .col-md-5 span {
+  line-height: 26px;
+  font-family: '宋体';
+}
+.sect1 .container-fluid .col-md-7 {
+  padding: 40px;
+}
+.sect1 .container-fluid .col-md-7 div {
+  overflow: hidden;
+}
+.sect1 .container-fluid .col-md-7 div img {
+  transition: all 0.6s;
+  width: 100%;
+}
+.sect1 .container-fluid .col-md-7 div img:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,40 @@
+.header {
+  margin-top: 10px;
+}
+.header #con1 {
+  overflow: hidden;
+  width: 100%;
+  padding: 35px 0px 0px 0px;
+}
+.header #con1 img {
+  width: 100%;
+}
+.mid .container {
+  border-bottom: solid 1px #ccc;
+  width: 100%;
+  padding: 21px;
+}
+.mid .container span {
+  padding: 5px;
+}
+.mid .container span:first-child {
+  font-weight: bold;
+  font-size: 24px;
+  color: #004d88;
+}
+.mid .container span:last-child {
+  font-family: "Arista2";
+  font-weight: bold;
+  font-size: 24px;
+  color: #004d88;
+  position: relative;
+}
+.mid .container span:last-child::after {
+  content: '';
+  width: 100px;
+  height: 1px;
+  border-bottom: solid 2px blue;
+  position: absolute;
+  top: 59px;
+  right: 47px;
+}

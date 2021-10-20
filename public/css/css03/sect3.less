@@ -1,0 +1,121 @@
+
+.sect {
+  .container {
+    margin-top: 30px;
+    width     : 100%;
+    text-align: center;
+    
+
+    :nth-child(3) {
+      background-color: #004d88;
+      color           : white;
+    }
+
+    a {
+      border         : solid 1px black;
+      padding        : 15px 25px;
+      font-size      : 16px;
+      text-decoration: none;
+
+    }
+
+    a:hover {
+      background-color: #004d88;
+      color           : white;
+    }
+  }
+}
+  // .sect3{
+  //     padding: 0px 0px 0px 80px;
+  //     margin-top: 40px;
+  //    .container-fluid{
+
+  //        .row{
+  //            .col-md-2{
+  //                #im1{}
+              
+  //                div{
+                    
+
+  //                       width: 100%;
+                        
+                        
+                     
+  //                       border: solid 1px red;
+  //                   img{
+  //                       width: 100%;
+  //                       height: 200px;
+  //                   }
+  //                }
+  //            }
+  //        }
+  //    }
+  // }
+
+  .sect3{
+    padding: 0px 0px 40px 0px;
+    margin-top: 40px;
+    .container-fluid{
+      div{
+        overflow: hidden;
+        margin-top: 20px;
+        float: left;
+        border: solid 1px #ccc;
+        
+        // padding: 0px 20px;
+        img{
+          width: 100%;
+          height: 100%;
+          transition: all 0.6s;
+          &:hover{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1px) {
+    .sect3>.container-fluid{
+      width: 90%;
+      
+    }
+    .sect3>.container-fluid>div{
+      height: 131px;
+      margin-left: 2%;
+      width: 48%;
+    }
+  }
+  @media (min-width: 768px) {
+    .sect3>.container-fluid{
+      width: 90%;
+      
+    }
+    .sect3>.container-fluid>div{
+      height: 131px;
+      margin-left: 2%;
+      width: 18%;
+    }
+  }
+  @media (min-width: 992px) {
+    .sect3>.container-fluid{
+      width: 90%;
+      
+    }
+    .sect3>.container-fluid>div{
+      height: 216px;
+      margin-left: 2%;
+      width: 18%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .sect3>.container-fluid{
+      width: 90%;
+      
+    }
+    .sect3>.container-fluid>div{
+      height: 160px;
+      margin-left: 2%;
+      width: 18%;
+    }
+}
+

@@ -1,0 +1,812 @@
+@font-face {
+    font-family: Arista2;
+    src: url("https://www.996w.com/static/fonts/Source%20Han%20Sans%20CN%20Regular.woff2");
+
+}
+
+body {
+    background: #fff;
+    font-family: "Arista2";
+}
+
+.ofv {
+    overflow: visible !important;
+}
+
+.head {
+    background: #fff;
+    position: fixed;
+    width: 100vw;
+    z-index: 200;
+    overflow: hidden;
+    top: 0;
+    transition: all .5s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.head>.typeArea {
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+}
+
+.head>.typeArea>.logoImg {
+    display: inline-block;
+}
+
+.head>.typeArea>.logoImg>img {
+    width: 252px;
+    height: 100px;
+}
+
+.navigation {
+    position: absolute;
+    right: 345px;
+    top: 0;
+}
+
+.navigation>div {
+    display: block;
+    height: 52px;
+    float: left;
+    line-height: 52px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 14px 35px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    position: relative;
+}
+
+.navigation>div>.hideMenu {
+    display: none;
+}
+
+.navigation>div:last-child {
+    padding-right: 0;
+}
+
+.navigation>div:hover {
+    color: #004d88;
+}
+
+.navigation>div:hover:after {
+    background: #004d88;
+    width: 44px;
+}
+
+.navigation>div.current {
+    font-weight: bold;
+    color: #004d88;
+}
+
+.navigation>div:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 3px;
+    top: 40px;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    transition: all .5s;
+}
+
+.navigation>div.current:after {
+    background: #004d88;
+    width: 44px;
+}
+
+.navigation>div:last-child:after {
+    left: 35px;
+}
+
+.navigation .current {
+    /*background: #078F45;*/
+    color: #333;
+}
+
+.head .searchImg {
+    width: 24px;
+    height: 24px;
+    background: #7A7A7A;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 27.5px;
+    /*24+14/2/2*/
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 19px;
+}
+
+.head .searchImg>img {
+    width: 15px;
+    height: 14px;
+}
+
+.head .lang {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 19px;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.searchBox {
+    width: 160px;
+    height: 30px;
+    top: 25px;
+    position: absolute;
+    right: 42px;
+}
+
+.searchBox>input {
+    width: 100%;
+    height: 100%;
+    border-radius: 12.5px;
+    background: #EDEDED;
+    padding-left: 23px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    padding-right: 35px;
+}
+
+.searchBox>img {
+    position: absolute;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    margin-top: -6px;
+    cursor: pointer;
+}
+
+.arrowsContain {
+    width: 100px;
+    height: 33px;
+    position: absolute;
+    right: 200px;
+    z-index: 20;
+    display: flex;
+    top: 23px;
+}
+
+.arrowsContain .leftContain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    color: #999;
+    margin: 0 auto;
+    transition: all .5s;
+}
+
+.arrowsContain .leftContain:hover {
+    color: #004d88;
+}
+
+.arrowsContain .leftContain:after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 20px;
+    left: -40px;
+    top: 8px;
+    background: #999999;
+}
+
+.arrowsContain .rightContain {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.hideMenu {
+    width: 150px;
+    position: absolute;
+    z-index: 10;
+    top: 98%;
+    left: 0;
+
+}
+
+.hideMenu>a {
+    display: block;
+    height: 40px;
+    background: #fff;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #999;
+}
+
+.hideMenu>a:hover {
+    color: #004d88;
+}
+
+
+.head.scrollHide>.typeArea {
+    height: 0;
+}
+
+
+
+.head.pc {
+    display: block;
+}
+
+.head.mobile {
+    display: none;
+}
+
+.head.mobile .leftContain>ul {
+    width: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head.mobile .leftContain>ul li {
+    position: relative;
+    top: 0;
+    height: 3px;
+    background: #999;
+    transition: all 0.5s;
+}
+
+.head.mobile .leftContain>ul.active .m_first_li {
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.head.mobile .leftContain>ul.active .m_none_li {
+    display: none;
+}
+
+.head.mobile .leftContain>ul.active .m_second_li {
+    top: -10px;
+    transform: rotate(-45deg);
+}
+
+.head.mobile .arrowsContain {
+    border: none;
+}
+
+.head.mobile .arrowsContain .leftContain:after {
+    display: none;
+}
+
+.head.mobile .arrowsContain {
+    width: 150px;
+}
+
+.head.mobile>.typeArea {
+    height: 45px;
+}
+
+.head.mobile>.typeArea>.logoImg>img {
+    height: 45px;
+}
+
+.head.mobile>.typeArea>.logoImg {
+    margin-top: 0;
+}
+
+.head.mobile .arrowsContain {
+    top: 4px;
+    width: 100px;
+}
+
+.head.mobile .arrowsContain .leftContain {
+    width: 35%;
+}
+
+.head.mobile .arrowsContain {
+    justify-content: space-between;
+}
+
+/*搜索框*/
+.productionDataForm {
+    width: 400px;
+    position: fixed;
+    right: 5px;
+    top: 95px;
+    z-index: 3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    display: none;
+}
+
+.productionDataForm>div {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1.5px solid #fff;
+}
+
+.productionDataForm>div:last-child {
+    border: none;
+}
+
+.productionDataForm>div>div.left {
+    width: 20%;
+    background: #333;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.productionDataForm>div>div.right {
+    flex: 1;
+    background: #fff;
+    padding: 0 4%;
+    font-weight: bold;
+    color: #434343;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.productionDataForm>div>div.right input {
+    width: 100%;
+    height: 100%;
+    border: none;
+
+}
+
+/*搜索框*/
+
+
+/*手机菜单*/
+.phoneScreen {
+    position: fixed;
+    height: calc(100vh - 45px);
+    width: 100%;
+    top: 45px;
+    background: rgba(0, 0, 0, .5);
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: center;
+    z-index: 100;
+    display: none;
+}
+
+.phoneScreen input {
+
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 0 none;
+
+}
+
+.phoneScreen .VerticalFont {
+    display: block;
+    margin: 0 auto;
+    margin-top: 4%;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background-color: #1b1b1b;
+    color: #d9d9d9;
+    cursor: pointer;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border: 0 none;
+}
+
+.phoneMenu {
+    position: fixed;
+    height: calc(100vh - 45px);
+    width: 100%;
+    top: 45px;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: all .5s;
+    overflow-x: hidden;
+    z-index: 200;
+}
+
+.phoneMenu.current {
+
+    transform: translateX(0%);
+
+}
+
+.navv {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.navv>li {
+    padding: 25px 0;
+    line-height: 35px;
+    border-bottom: 1px solid hsla(0, 0%, 72%, .5);
+    /*text-indent: 30px;*/
+    position: relative;
+    font-size: 16px;
+    color: #282828;
+
+}
+
+.navv>li:last-child {
+    border-bottom: none;
+}
+
+.navv>li>span {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    background-size: 100% 100% !important;
+
+}
+
+.navv>li.current {
+    /*background:pink;*/
+}
+
+.sub>a {
+    display: block;
+    position: relative;
+    list-style: none;
+    /*background-color: #ccc;*/
+    /*border-bottom: 1px solid white;*/
+    font-size: 14px;
+    color: #8d8d8d;
+    padding-left: 20px;
+
+}
+
+.sub>a>span {
+    display: inline-block;
+    /*background: url(images/rightw.jpg) 0 0 no-repeat;*/
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+.sub>a.current {
+    background: #004d88;
+    color: #fff;
+}
+
+.sub>a.current>span {
+    /*background: url(images/rightg.jpg) 0 0 no-repeat;*/
+}
+
+.sub {
+    display: none;
+    padding: 10px 0;
+}
+
+.navv>li>span {
+    background: url('/static/index/rossum9ED2/pc/zh-cn/images/rightw.jpg') 0 0 no-repeat;
+
+    transition: all .5s;
+}
+
+.navv>li.current>span {
+    transform: rotate(90deg);
+}
+
+.imPC {
+    display: block !important;
+}
+
+.imMobile {
+    display: none !important;
+}
+
+/*手机菜单*/
+
+@media (max-width:1690px) {
+    .navigation {
+        right: 345px;
+    }
+
+    .navigation>div {
+        padding: 14px .35rem;
+    }
+
+}
+
+@media (max-width:1279px) {
+
+    .head.mobile>.typeArea>.logoImg>img {
+        width: 125px;
+        height: auto;
+        display: block;
+    }
+
+    .head.pc {
+        display: none;
+    }
+
+    .head.mobile {
+        display: block;
+    }
+
+    .arrowsContain {
+        right: 5%;
+    }
+
+
+}
+
+@media (max-width: 799px) {
+
+    /*.footer{*/
+    /*display:none;*/
+    /*}*/
+    .footer .typeArea .top {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .footer .mid .num {
+        font-size: 30px;
+    }
+
+    .research>.typeArea>.left .technicalPatent .tpFont {
+        font-size: 14px;
+        height: 36px;
+        line-height: 36px;
+    }
+
+    .onlyFont .item>.zh {
+        font-size: 14px;
+    }
+
+    .navigationn>a {
+        font-size: 14px;
+    }
+
+    .mobileDev .item>.year {
+        font-size: 25px;
+    }
+
+    .businessListNav>.typeArea>.item {
+        font-size: 14px !important;
+        line-height: 45px;
+    }
+
+    .menuTab .circleContain .title {
+        font-size: 16px;
+    }
+
+    .formStyle .inputContain .publicWidth input::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+
+    .formStyle .oneInput textarea::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+
+    .menuTab .circleContain .content {
+        font-size: 14px;
+
+    }
+
+    .publicTitle .title .font {
+        font-size: 25px;
+    }
+
+    .publicTitle .content {
+        font-size: 14px;
+    }
+
+    .reallyContain>.typeArea>.item>.screen .title {
+        font-size: 14px;
+    }
+
+    .companyAndVideo>.typeArea>.left>p {
+        font-size: 14px;
+    }
+
+    .newList .typeArea .a .title {
+        font-size: 16px;
+    }
+
+    .newList .typeArea .a .time .m {
+        font-size: 25px;
+    }
+
+    .newList .typeArea .a .contain {
+        font-size: 14px;
+    }
+
+    .newsList .imgArticleContain .imgArticle .imgArticleRight .title {
+        font-size: 16px;
+
+    }
+
+    .articleee .contain p {
+        font-size: 14px;
+    }
+
+    .articleee>.typeArea>.title>.info .time img {
+        margin-top: 0;
+        margin-right: 10px;
+    }
+
+    .articleee>.typeArea>.title>.info .eye img {
+        margin-top: 0;
+        margin-right: 10px;
+    }
+
+    .newsList .imgArticleContain .imgArticle .imgArticleRight .contain {
+        display: none;
+    }
+
+    .onlyFont .item>.num {
+        font-size: 30px;
+    }
+
+    .businissGoods>.typeArea>.item>.des {
+        font-size: 14px;
+    }
+
+    .publicDescript>.contain {
+        font-size: 16px;
+    }
+
+    .Scratchable>a>p.title {
+        font-size: 14px !important;
+    }
+
+    .detailInfo .infoContain>.left {
+        min-width: 54px;
+        max-width: 60px;
+    }
+
+    .detailInfo .infoContain>.left.n {
+        max-width: 150px;
+    }
+
+    .aboutUsFactoryList .typeArea>a .title {
+        font-size: 14px;
+    }
+
+    .imPC {
+        display: none !important;
+    }
+
+    .imMobile {
+        display: block !important;
+    }
+
+
+
+
+
+}
+
+
+
+.justVideo {
+    margin-bottom: 0;
+}
+
+body {
+    background: #fff;
+}
+
+@media (max-width: 1399px) {}
+
+
+
+
+
+.mobileDevLine {
+    display: none;
+}
+
+.mobileDevLine {
+    background: #fff;
+    padding: 50px 0;
+    padding-top: 0;
+
+}
+
+.mobileDevLine>.typeArea>.item:first-child {
+    margin-top: 0;
+}
+
+.mobileDevLine>.typeArea>.item {
+    display: flex;
+    margin-top: 30px;
+
+}
+
+.mobileDevLine>.typeArea>.item>.left {
+    width: 18%;
+    position: relative;
+
+}
+
+.mobileDevLine>.typeArea>.item>.left>.line {
+    width: 2px;
+    height: 100%;
+    background: #E6E6E6;
+    position: absolute;
+    left: 15px;
+
+}
+
+.mobileDevLine>.typeArea>.item>.left>.circle {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #999;
+    box-sizing: border-box;
+    left: 5px;
+    transition: all .5s;
+
+}
+
+.mobileDevLine>.typeArea>.item>.right {}
+
+.mobileDevLine>.typeArea>.item>.right .year {
+    font-size: 25px;
+    color: #999;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+.mobileDevLine>.typeArea>.item>.right .ls {
+    font-size: 13px;
+    color: #666;
+    margin-top: 25px;
+    line-height: 35px;
+}
+
+@media (max-width:1399px) {
+    /*.mobileDevLine{*/
+    /*display:none;*/
+    /*}*/
+}
+
+@media (max-width: 799px) {
+    .mobileDevLine {
+        display: block;
+    }
+
+    .mobileDev {
+        display: none;
+    }
+}
