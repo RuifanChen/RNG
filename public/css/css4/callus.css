@@ -203,9 +203,12 @@ body{
     left:0;
 
 }
+
+/* sjsjsjsj */
 .navigation>div:hover .hideMenu{
     display: block;
 }
+
 .hideMenu>a{
     display: block;
     height:40px;
