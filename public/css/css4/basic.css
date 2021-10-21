@@ -2596,6 +2596,10 @@ h1,h2,h3,h4{font-size:12px; font-weight:normal}
     justify-content: center;
 }
 
+.navigation>div:hover .hideMenu {
+    display: block;
+}
+
 .navigationn > a {
     display: block;
     float: left;
