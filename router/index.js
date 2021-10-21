@@ -31,4 +31,16 @@ router.post('/register', function (req, res, next) {
     console.log("xxxx");
 })
 
-module.exports = router
+
+router.get("/page.html",(req,res)=>{
+    res.render("jiesao.html")
+})
+
+router.get("/ggzsry.html",(req,res)=>{
+    res.render("rongyu.html")
+})
+
+router.get("/gghzhb.html",(req,res)=>{
+    res.render("hezuo.html")
+})
+module.exports = router;
