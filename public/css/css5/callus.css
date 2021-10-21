@@ -204,6 +204,9 @@ body{
     left:0;
 
 }
+.navigation>div:hover .hideMenu {
+    display: block;
+}
 .hideMenu>a{
     display: block;
     height:40px;
